@@ -8,6 +8,7 @@ LABEL build_version="version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="cyberatz"
 
 ENV DEBIAN_FRONTEND="noninteractive"
+ENV HEALTH_HOST
 
 # add local files
 COPY healthcheck /healthcheck
