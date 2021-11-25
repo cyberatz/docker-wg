@@ -3,7 +3,7 @@
 HEALTH_HOST=${HEALTH_HOST}
 #HEALTH_HOST=10.13.13.1
 
-
+sed -i 's/10.0.0.0\/8/10.0.0.0\/24/g' /config/wg0.conf
 
 for run in {0..10}
 do
