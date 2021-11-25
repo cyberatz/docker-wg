@@ -1,6 +1,5 @@
 #!/bin/sh
 
-SERVICE="$1"
 HEALTH_HOST=${HEALTH_HOST}
 #HEALTH_HOST=10.13.13.1
 
