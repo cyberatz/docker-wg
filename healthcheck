@@ -2,14 +2,14 @@
 
 SERVICE="$1"
 HEALTH_HOST=${HEALTH_HOST}
-HEALTH_HOST=10.13.13.1
+#HEALTH_HOST=10.13.13.1
 
 
 
 for run in {0..15}
 do
 #        nc -zv -w10 $SERVERIP $SERVERPORT && break
-         ping -c 1 $HEALTH_HOST 
+         ping -q -o -c 2 $HEALTH_HOST >/dev/null
 done
 if [ $? -ne 0 ]
 then
