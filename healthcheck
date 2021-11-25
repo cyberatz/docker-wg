@@ -5,10 +5,10 @@ HEALTH_HOST=${HEALTH_HOST}
 
 
 
-for run in {0..15}
+for run in {0..10}
 do
 #        nc -zv -w10 $SERVERIP $SERVERPORT && break
-         ping -q -o -c 2 $HEALTH_HOST >/dev/null
+         ping -c 1 $HEALTH_HOST >/dev/null
 done
 if [ $? -ne 0 ]
 then
