@@ -1,14 +1,15 @@
 #!/bin/sh
 
 SERVICE="$1"
-SERVERIP=10.13.13.1
+HEALTH_HOST=${HEALTH_HOST}
+HEALTH_HOST=10.13.13.1
 
 
 
 for run in {0..15}
 do
 #        nc -zv -w10 $SERVERIP $SERVERPORT && break
-         ping -c 1 $SERVERIP
+         ping -c 1 $HEALTH_HOST 
 done
 if [ $? -ne 0 ]
 then
